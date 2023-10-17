@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+        <title>Steam</title>
+        <link rel="stylesheet" href="./styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header id="header">
+            <img id="header-img" src="https://store.cloudflare.steamstatic.com/public/shared/images/responsive/header_logo.png"/>
+            <nav id="nav-bar">
+                <a id="link-features" class="nav-link" href="#features">Features</a>
+                <a id="link-video" class="nav-link" href="#video">How It Works</a>
+                <a id="link-pricing" class="nav-link" href="#pricing">Pricing</a>
+            </nav>
+        </header>
+
+        <div class="container">
+            <div class="form-container">
+                <form id="form" action="https://www.freecodecamp.com/email-submit" method="post">
+                    <h1>Steam</h1>
+                    <input id="email" type="email" placeholder="Enter your email address" name="email"/>
+                    <input id="submit" type="submit" value="GET STARTED" />
+                </form>
+            </div>
+
+            <div id="features" class="features-container">
+                <div class="feature">
+                    <h2>Software delivery and maintenance</h2>
+                    <p>
+                        Steam's primary service is to allow its users to purchase games and other software, adding them to a virtual library from which they may be downloaded and installed an unlimited number of times.
+                    </p>
+                </div>
+
+                <div class="feature">
+                    <h2>Storefront features</h2>
+                    <p>
+                        The Steam client includes a digital storefront called the Steam Store through which users can purchase games. Once the game is bought, a software license is permanently attached to the user's Steam account, allowing them to download the software on any compatible device.
+                    </p>
+                </div>
+
+                <div class="feature">
+                    <h2>Privacy, security and abuse</h2>
+                    <p>
+                        The popularity of Steam has led to the service's being attacked by hackers. An attempt occurred in November 2011, when Valve temporarily closed the community forums, citing potential hacking threats to the service.
+                    </p>
+                </div>
+            </div>
+
+            <div class="video-container">
+                <iframe
+                    id="video" 
+                    width="560" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/Js2eR4YEiSk?si=XLCIeNBtaUo4fsed" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+
+            <div id="pricing" class="pricing-container">
+                <div id="pricing-1" class="price-box">
+                    <h3 class="pricing-title">Basic</h3>
+                    <h3 class="pricing-value">$600</h3>
+                    <p>lorem ipsum</p>
+                    <p>lorem ipsum</p>
+                    <p>lorem ipsum</p>
+                    <p>lorem ipsum</p>
+                    <button>SELECT</button>
+                </div>
+
+                <div id="pricing-2" class="price-box">
+                    <h3 class="pricing-title">Regular</h3>
+                    <h3 class="pricing-value">$900</h3>
+                    <p>All <span>Basic</span> Features</p>
+                    <p>lorem ipsum</p>
+                    <p>lorem ipsum</p>
+                    <p>lorem ipsum</p>
+                    <button>SELECT</button>
+                </div>
+
+                <div id="pricing-3" class="price-box">
+                    <h3 class="pricing-title">Pro</h3>
+                    <h3 class="pricing-value">$1200</h3>
+                    <p>All <span>Regular</span> Features</p>
+                    <p>lorem ipsum</p>
+                    <p>lorem ipsum</p>
+                    <p>lorem ipsum</p>
+                    <button>SELECT</button>
+                </div>
+            </div>
+
+            <div id="footer">
+                <div id="contact">
+                    <a href="https://store.steampowered.com/privacy_agreement/?snr=100601_44_44" target="_blank">Privacy</a>
+                    <a href="https://store.steampowered.com/legal/?snr=100601_44_44_" target="_blank">Terms</a>
+                    <a href="https://store.steampowered.com/subscriber_agreement/?snr=100601_44_44_" target="_blank">Contact</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

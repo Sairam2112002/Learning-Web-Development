@@ -1,0 +1,106 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Helvetica Neue', Arial, sans-serif;
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eee;
+    margin: 40px;
+    border-radius: 10px;
+}
+
+/* Title Container */
+
+h1 {
+    font-size: 2.5rem;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+#title-div {
+    display: block;
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    color: #333;
+    padding-top: 1px;
+    margin-top: 40px;
+}
+
+#title-div > p {
+    display: block;
+    margin-top: 0; 
+}
+
+/* Image Container */
+
+#img-div {
+    background-color: white;
+    width: 80%;
+    margin-top: 0;
+    text-align: center;
+    padding-top: 20px;
+    border-radius: 20px;
+}
+
+#image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    width: 90%;
+    margin: 0 auto;
+}
+
+figcaption {
+    margin: 20px;
+}
+
+/* Information Conatiner */
+
+#info-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+}
+
+#info-div > h2 {
+    font-size: 1.5rem;
+}
+
+.time-line-items {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-weight: 350;
+}
+
+/* Quotation Container */
+
+#quote-div {
+    max-width: 600px;
+    border: 20px;
+    margin: 0 20px;
+}
+
+.quote {
+    font-style: italic;
+    font-weight: 350;
+}
+
+.quote-author {
+    text-align: left;
+    font-weight: 350;
+}
+
+/* Bottom Container */
+
+#bottom-div {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 0 20px;
+}
