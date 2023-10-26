@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML-Level-3</title>
+    <style>
+        #Q1 {
+            background-color: black;
+            color: white;
+        }
+        #Q1 table {
+            margin: 0 auto;
+        }
+
+        #Q1 table * {
+            text-align: center;
+            border: 2px solid white;
+        }
+    </style>
+</head>
+<body>
+    <!--Q1-->
+    <div id="Q1">
+        <table>
+            <caption>Student Information</caption>
+            <tbody>
+                <tr>
+                    <th rowspan="6">Info</th>
+                    <th rowspan="2">Name</th>
+                    <th colspan="2">Address</th>
+                </tr>
+                <tr>
+                    <th>City</th>
+                    <th>House</th>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>Delhi</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>B</td>
+                    <td>Mumbai</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>C</td>
+                    <td>Kolkata</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>D</td>
+                    <td>Pune</td>
+                    <td>4</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <hr>
+
+    <!--Q2-->
+    <div id="Q2">
+        <label>Name: <input type="text" required/></label>
+
+        <p>
+            Sex: 
+            <label><input type="radio" name="sex"/> Male</label>
+            <label><input type="radio" name="sex"/> Female</label>
+        </p>
+
+        <p>
+            <label>
+                Country: 
+                <select required>
+                    <option value="" selected>Select an option</option>
+                    <option>India</option>
+                    <option>Others</option>
+                </select>
+            </label>
+        </p>
+
+        <p>
+            <label>
+                Message: 
+                <textarea rows="5" cols="20"></textarea>
+            </label>
+        </p>
+
+        <label>
+            <input type="checkbox"/> Subscribe?
+        </label>
+
+        <p>
+            <button>Submit</button>
+        </p>
+    </div>
+    <hr>
+    <!--Q3-->
+    <div id="Q3">
+        <p>
+            <label>
+                Name: 
+                <input type="text" placeholder="Enter your name"/>
+            </label>
+        </p>
+
+        <p>
+            <label>
+                Email: 
+                <input type="email" placeholder="Enter your email"/>
+            </label>
+        </p>
+
+        <p>
+            <label>
+                Message: 
+                <textarea></textarea>
+            </label>
+        </p>
+
+        <div>
+            Rate us out of 5:
+            <p><input type="radio" name="rating"/> 1</p>
+            <p><input type="radio" name="rating"/> 2</p>
+            <p><input type="radio" name="rating"/> 3</p>
+            <p><input type="radio" name="rating"/> 4</p>
+            <p><input type="radio" name="rating"/> 5</p>
+        </div>
+
+        <button>Send your message!</button>
+    </div>
+</body>
+</html>
