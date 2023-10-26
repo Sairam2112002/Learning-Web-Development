@@ -1,0 +1,48 @@
+/*Q1*/
+#q1 {
+    width: 400px;
+    height: 400px;
+    padding: 10px;
+    border: 5px solid aquamarine;
+    border-radius: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.blocks {
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+    border: 2px solid black;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+
+/*Q2*/
+#q2 {
+    height: 50px;
+    width: 900px;
+    background-color: pink;
+    border: 2px solid aqua;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    padding-left: 20px;
+}
+
+#q2 > div {
+    height: 50px;
+    width: 80px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
