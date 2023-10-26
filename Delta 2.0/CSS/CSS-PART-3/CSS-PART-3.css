@@ -1,0 +1,25 @@
+/*Q1*/
+#Q1 {
+    height: 150px;
+    width: 300px;
+    background-color: grey;
+    border: 5px dotted black;
+    margin: 20px 1em 40px 2em;
+    padding: 1em;
+}
+
+/*Q2*/
+#Q2 > div {
+    height: 100px;
+    width: 100px;
+    background-color: pink;
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+/*Q3*/
+/*The default display property of list items is set to "list-item", so when we change the display property of list items, we are overriding the default display property, hence the bullet points disappear*/
+#Q3 li {
+    display: inline;
+}
