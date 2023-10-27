@@ -1,15 +1,27 @@
 :root {
     --sky-background: #27374D;
-    --viewport-height: 739.2px;
+    --viewport-height: 100vh;
     --buildings-width: 150px;
 
     --front-building-1-height: 350px;
     --front-building-1-color: #89CFF3;
     --front-building-1-window-color: #A0E9FF;
     
-    --back-building-1-height: 400px;
-    --back-building-1-color: #B2C8BA;
-    --back-building-1-window-color: #D2E3C8;
+    --front-building-2-height: 400px;
+    --front-building-2-color: #B2C8BA;
+    --front-building-2-window-color: #D2E3C8;
+
+    --front-building-3-height: 200px;
+    --front-building-3-color: #FFDFDF;
+    --front-building-3-window-color: #FFF6F6;
+
+    --front-building-4-height: 400px;
+    --front-building-4-color: #C3EDC0;
+    --front-building-4-window-color: #E9FFC2;
+
+    --front-building-5-height: 550px;
+    --front-building-5-color: #14C38E;
+    --front-building-5-window-color: #B8F1B0;
 }
 
 * {
@@ -75,7 +87,7 @@
 }
 /*Forward Buildings*/
 #forward-buildings {
-    z-index: 1;
+    z-index: 2;
     position: fixed;
     top: 0;
     left: 0;
@@ -93,7 +105,7 @@
     background-color: var(--front-building-1-color);
     position: absolute;
     top: calc(var(--viewport-height) - var(--front-building-1-height));
-    left: 45%;
+    left: 15%;
     border: 10px solid #CDF5FD;
     padding: 10px;
     display: flex;
@@ -106,26 +118,12 @@
     background-color: var(--front-building-1-window-color);
 }
 
-/*Backward Buildings*/
-#backward-buildings {
-    z-index: 2;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 600px;
-    width: 100%;
-}
-
-.buildings-back {
-    border-bottom: none !important;
-}
-
-#back-1 {
-    height: var(--back-building-1-height);
+#front-2 {
+    height: var(--front-building-2-height);
     width: var(--buildings-width);
-    background-color: var(--back-building-1-color);
+    background-color: var(--front-building-2-color);
     position: absolute;
-    top: calc(var(--viewport-height) - var(--back-building-1-height));
+    top: calc(var(--viewport-height) - var(--front-building-2-height));
     left: 30%;
     border: 10px solid #EBF3E8;
     padding: 10px;
@@ -135,8 +133,82 @@
     align-items: center;
 }
 
-.back-1-window-row {
+.front-2-window-row {
     width: 100px;
     height: 10%;
-    background-color: var(--back-building-1-window-color);
+    background-color: var(--front-building-2-window-color);
+}
+
+
+#front-3 {
+    height: var(--front-building-3-height);
+    width: var(--buildings-width);
+    background-color: var(--front-building-3-color);
+    position: absolute;
+    top: calc(var(--viewport-height) - var(--front-building-3-height));
+    left: 45%;
+    border: 10px solid #AEDEFC;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.front-3-window-column {
+    height: 90%;
+    width: 50px;
+    background-color: var(--front-building-3-window-color);
+}
+
+#front-4 {
+    height: var(--front-building-4-height);
+    width: var(--buildings-width);
+    background-color: var(--front-building-4-color);
+    position: absolute;
+    top: calc(var(--viewport-height) - var(--front-building-4-height));
+    left: 60%;
+    border: 10px solid #FDFFAE;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.front-4-window-row {
+    background-color: var(--front-building-4-window-color);
+    width: 90%;
+    height: 35px;
+}
+
+#front-5 {
+    height: var(--front-building-5-height);
+    width: var(--buildings-width);
+    background-color: var(--front-building-5-color);
+    position: absolute;
+    top: calc(var(--viewport-height) - var(--front-building-5-height));
+    left: 75%;
+    border: 10px solid #E3FCBF;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.front-5-window-column {
+    background-color: var(--front-building-5-window-color);
+    height: 95%;
+    width: 10px;
+}
+
+/*Backward Buildings*/
+#backward-buildings {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 600px;
+    width: 100%;
+}
+
+.buildings-back {
+    border-bottom: none !important;
 }
