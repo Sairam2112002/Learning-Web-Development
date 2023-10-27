@@ -1,0 +1,142 @@
+:root {
+    --sky-background: #27374D;
+    --viewport-height: 739.2px;
+    --buildings-width: 150px;
+
+    --front-building-1-height: 350px;
+    --front-building-1-color: #89CFF3;
+    --front-building-1-window-color: #A0E9FF;
+    
+    --back-building-1-height: 400px;
+    --back-building-1-color: #B2C8BA;
+    --back-building-1-window-color: #D2E3C8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/*Sky Background*/
+#background {
+    z-index: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--sky-background);
+    height: 100%;
+    width: 100%;
+}
+
+.clouds > svg {
+    height: 100px;
+    fill:#526D82;
+}
+
+#cloud1 {
+    position: absolute;
+    left: 1%;
+    top: 5%;
+}
+
+#cloud2 {
+    position: absolute;
+    left: 22.75%;
+    top: 20%;
+}
+
+#cloud3 {
+    position: absolute;
+    left: 45.5%;
+    top: 5%;
+}
+
+#cloud4 {
+    position: absolute;
+    left: 68.25%;
+    top: 20%;
+}
+
+#cloud5 {
+    position: absolute;
+    left: 91%;
+    top: 5%;
+}
+
+#moon > svg {
+    fill:#DDE6ED;
+    height: 100px;
+    width: 100px;
+}
+
+#moon {
+    position: absolute;
+    left: 46.5%;
+    top: 25%;
+}
+/*Forward Buildings*/
+#forward-buildings {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 600px;
+    width: 100%;
+}
+
+.buildings-front {
+    border-bottom: none !important;
+}
+
+#front-1 {
+    height: var(--front-building-1-height);
+    width: var(--buildings-width);
+    background-color: var(--front-building-1-color);
+    position: absolute;
+    top: calc(var(--viewport-height) - var(--front-building-1-height));
+    left: 45%;
+    border: 10px solid #CDF5FD;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.front-1-window-column {
+    height: 90%;
+    width: 30px;
+    background-color: var(--front-building-1-window-color);
+}
+
+/*Backward Buildings*/
+#backward-buildings {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 600px;
+    width: 100%;
+}
+
+.buildings-back {
+    border-bottom: none !important;
+}
+
+#back-1 {
+    height: var(--back-building-1-height);
+    width: var(--buildings-width);
+    background-color: var(--back-building-1-color);
+    position: absolute;
+    top: calc(var(--viewport-height) - var(--back-building-1-height));
+    left: 30%;
+    border: 10px solid #EBF3E8;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.back-1-window-row {
+    width: 100px;
+    height: 10%;
+    background-color: var(--back-building-1-window-color);
+}
