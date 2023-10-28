@@ -1,27 +1,43 @@
 :root {
     --sky-background: #27374D;
     --viewport-height: 100vh;
-    --buildings-width: 150px;
+    --buildings-width: 10vw;
 
-    --front-building-1-height: 350px;
+    --front-building-1-height: 50vh;
     --front-building-1-color: #89CFF3;
     --front-building-1-window-color: #A0E9FF;
     
-    --front-building-2-height: 400px;
+    --front-building-2-height: 40vh;
     --front-building-2-color: #B2C8BA;
     --front-building-2-window-color: #D2E3C8;
 
-    --front-building-3-height: 200px;
+    --front-building-3-height: 30vh;
     --front-building-3-color: #FFDFDF;
     --front-building-3-window-color: #FFF6F6;
 
-    --front-building-4-height: 400px;
+    --front-building-4-height: 60vh;
     --front-building-4-color: #C3EDC0;
     --front-building-4-window-color: #E9FFC2;
 
-    --front-building-5-height: 550px;
+    --front-building-5-height: 80vh;
     --front-building-5-color: #14C38E;
     --front-building-5-window-color: #B8F1B0;
+
+    --back-building-1-height: 60vh;
+    --back-building-1-color: #E8A0BF;
+    --back-building-1-window-color: #BA90C6;
+
+    --back-building-2-height: 50vh;
+    --back-building-2-color: #3A98B9;
+    --back-building-2-window-color: #FFF1DC;
+
+    --back-building-3-height: 40vh;
+    --back-building-3-color: #8DCBE6;
+    --back-building-3-window-color: #9DF1DF;
+
+    --back-building-4-height: 70vh;
+    --back-building-4-color: #FFA1CF;
+    --back-building-4-window-color: #FFD6EC;
 }
 
 * {
@@ -40,7 +56,7 @@
 }
 
 .clouds > svg {
-    height: 100px;
+    height: 15vh;
     fill:#526D82;
 }
 
@@ -76,8 +92,8 @@
 
 #moon > svg {
     fill:#DDE6ED;
-    height: 100px;
-    width: 100px;
+    height: 15vh;
+    width: 15vh;
 }
 
 #moon {
@@ -91,12 +107,16 @@
     position: fixed;
     top: 0;
     left: 0;
-    height: 600px;
+    height: 100%;
     width: 100%;
 }
 
 .buildings-front {
     border-bottom: none !important;
+}
+
+#forward-buildings > div {
+    border: 0.5em solid;
 }
 
 #front-1 {
@@ -106,15 +126,15 @@
     position: absolute;
     top: calc(var(--viewport-height) - var(--front-building-1-height));
     left: 15%;
-    border: 10px solid #CDF5FD;
-    padding: 10px;
+    border-color: #CDF5FD !important;
+    padding: 0.5em;
     display: flex;
     justify-content: space-between;
 }
 
 .front-1-window-column {
     height: 90%;
-    width: 30px;
+    width: 25%;
     background-color: var(--front-building-1-window-color);
 }
 
@@ -125,8 +145,8 @@
     position: absolute;
     top: calc(var(--viewport-height) - var(--front-building-2-height));
     left: 30%;
-    border: 10px solid #EBF3E8;
-    padding: 10px;
+    border-color:#EBF3E8 !important;
+    padding: 0.5em;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -134,7 +154,7 @@
 }
 
 .front-2-window-row {
-    width: 100px;
+    width: 90%;
     height: 10%;
     background-color: var(--front-building-2-window-color);
 }
@@ -147,15 +167,15 @@
     position: absolute;
     top: calc(var(--viewport-height) - var(--front-building-3-height));
     left: 45%;
-    border: 10px solid #AEDEFC;
-    padding: 10px;
+    border-color:#AEDEFC !important;
+    padding: 0.5em;
     display: flex;
     justify-content: space-between;
 }
 
 .front-3-window-column {
     height: 90%;
-    width: 50px;
+    width: 40%;
     background-color: var(--front-building-3-window-color);
 }
 
@@ -166,8 +186,8 @@
     position: absolute;
     top: calc(var(--viewport-height) - var(--front-building-4-height));
     left: 60%;
-    border: 10px solid #FDFFAE;
-    padding: 10px;
+    border-color:#FDFFAE !important;
+    padding: 0.5em;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -177,7 +197,7 @@
 .front-4-window-row {
     background-color: var(--front-building-4-window-color);
     width: 90%;
-    height: 35px;
+    height: 10%;
 }
 
 #front-5 {
@@ -187,8 +207,8 @@
     position: absolute;
     top: calc(var(--viewport-height) - var(--front-building-5-height));
     left: 75%;
-    border: 10px solid #E3FCBF;
-    padding: 10px;
+    border-color:#E3FCBF !important;
+    padding: 0.5em;
     display: flex;
     justify-content: space-between;
 }
@@ -196,7 +216,7 @@
 .front-5-window-column {
     background-color: var(--front-building-5-window-color);
     height: 95%;
-    width: 10px;
+    width: 10%;
 }
 
 /*Backward Buildings*/
@@ -205,10 +225,151 @@
     position: fixed;
     top: 0;
     left: 0;
-    height: 600px;
+    height: 100%;
     width: 100%;
 }
 
 .buildings-back {
     border-bottom: none !important;
+}
+
+#backward-buildings > div {
+    border: 0.5em solid;
+}
+
+#back-1 {
+    height: var(--back-building-1-height);
+    width: var(--buildings-width);
+    background-color: var(--back-building-1-color);
+    position: absolute;
+    top: calc(var(--viewport-height) - var(--back-building-1-height));
+    left: 22.5%;
+    border-color:#C0DBEA !important;
+    padding: 0.5em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.back-1-window-column {
+    background-color: var(--back-building-1-window-color);
+    height: 95%;
+    width: 15%;
+}
+
+#back-2 {
+    height: var(--back-building-2-height);
+    width: var(--buildings-width);
+    background-color: var(--back-building-2-color);
+    position: absolute;
+    top: calc(var(--viewport-height) - var(--back-building-2-height));
+    left: 37.5%;
+    border-color:#EEEEEE !important;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.back-2-window-row {
+    background-color: var(--back-building-2-window-color);
+    width: 90%;
+    height: 5%;
+}
+
+#back-3 {
+    height: var(--back-building-3-height);;
+    width: var(--buildings-width);
+    background-color: var(--back-building-3-color);
+    position: absolute;
+    top: calc(var(--viewport-height) - var(--back-building-3-height));
+    left: 52.5%;
+    border-color:#E3F6FF !important;
+    padding: 0.5em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.back-3-window-colum {
+    background-color: var(--back-building-3-window-color);
+    height: 95%;
+    width: 10%;
+}
+
+#back-4 {
+    height: var(--back-building-4-height);
+    width: var(--buildings-width);
+    background-color: var(--back-building-4-color);
+    position: absolute;
+    top: calc(var(--viewport-height) - var(--back-building-4-height));
+    left: 67.5%;
+    border-color:#A7FFE4 !important;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.back-4-window-row {
+    background-color: var(--back-building-4-window-color);
+    width: 90%;
+    height: 7.5%;
+}
+
+@media(max-width: 1100px) {
+    .clouds > svg {
+        height: 10vh;
+    }
+
+    #moon > svg {
+        height: 10vh;
+        width: 10vh;
+    }
+
+    #forward-buildings > div {
+        border: 0.4em solid;
+    }
+
+    #backward-buildings > div {
+        border: 0.4em solid;
+    }
+}
+
+@media(max-width: 700px) {
+    .clouds > svg {
+        height: 7.5vh;
+    }
+
+    #moon > svg {
+        height: 7.5vh;
+        width: 7.5vh;
+    }
+
+    #forward-buildings > div {
+        border: 0.25em solid;
+    }
+
+    #backward-buildings > div {
+        border: 0.25em solid;
+    }
+}
+
+@media(max-width: 500px) {
+    .clouds > svg {
+        height: 5vh;
+    }
+
+    #moon > svg {
+        height: 5vh;
+        width: 5vh;
+    }
+
+    #forward-buildings > div {
+        border: 0.125em solid;
+    }
+
+    #backward-buildings > div {
+        border: 0.125em solid;
+    }
 }
